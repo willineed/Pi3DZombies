@@ -101,9 +101,16 @@ public class EnemyAI : MonoBehaviour
     private IEnumerator ScreamAndChase()
     {
         isScreaming = true;
+        
         agent.isStopped = true;
         animator.SetBool("isWalking", false);
         animator.SetBool("isRunning", false);
+
+        // Rotate to face the player
+        Vector3 direction = (player.position - transform.position).normalized;
+        Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
+        transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
+
         animator.SetTrigger("scream");
         PlayScreamSound();
         yield return new WaitForSeconds(animator.GetCurrentAnimatorStateInfo(0).length);
@@ -132,7 +139,7 @@ public class EnemyAI : MonoBehaviour
         return navHit.position;
     }
 
-    // Draw the detection and attack ranges in the editor
+    // Draw the detection and attack ranges in the editor for debugging purposes
     void OnDrawGizmosSelected()
     {
         // Draw the detection range
