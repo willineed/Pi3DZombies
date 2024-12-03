@@ -3,7 +3,7 @@ using UnityEngine.AI;
 using System.Collections;
 using UnityEngine.Audio;
 
-// This script is made with the help of Github copilot.
+// This script has been made with the help of Github Copilot
 public class EnemyAI : MonoBehaviour
 {
     public Transform player;
