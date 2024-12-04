@@ -18,7 +18,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private Gradient gradient;
 
     private int _maxHealth = 100;
-    private int bulletsInMag = 10;
+
 
     private void Awake()
     {
@@ -51,6 +51,7 @@ public class UIManager : MonoBehaviour
         if (healthBar != null)
         {
             healthBar.value = health;
+            Debug.Log("Healthbar: " + healthBar.value);
             healthFill.color = gradient.Evaluate((float)health / (float)_maxHealth);
         }
     }
@@ -66,7 +67,7 @@ public class UIManager : MonoBehaviour
     }
 
     // Update the overall ammo display
-    public void UpdateBulletsInMagText(int overallAmmo)
+    public void UpdateBulletsInMagText(int bulletsInMag)
     {
         if (bulletsInMagText != null)
         {

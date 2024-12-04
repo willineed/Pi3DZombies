@@ -4,12 +4,12 @@ using System.Collections;
 using UnityEngine.Audio;
 
 // This script has been made with the help of Github Copilot
-public class EnemyAI : MonoBehaviour
+public class Enemy : MonoBehaviour
 {
     public Transform player;
     public float detectionRange = 10f;
     public float attackRange = 2f;
-    public int damage = 10;
+    public int damage = 20;
     public float wanderRadius = 5f;
     public float wanderTimer = 5f;
     public float minWanderDistance = 2f;
@@ -21,16 +21,19 @@ public class EnemyAI : MonoBehaviour
     private NavMeshAgent agent;
     private Animator animator;
     private AudioSource audioSource;
+    public Rigidbody[] ragdollBodies;
     private float timer;
     private bool isScreaming = false;
     private bool isChasing = false;
     private float lastAttackTime;
+    [SerializeField]private int health = 30;
 
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
+        SetRagdollState(false);
         timer = wanderTimer;
         lastAttackTime = -attackCooldown;
         StartCoroutine(WanderRoutine());
@@ -66,8 +69,7 @@ public class EnemyAI : MonoBehaviour
         if (Time.time >= lastAttackTime + attackCooldown)
         {
             animator.SetTrigger("attack");
-            // Damage the player (assuming the player has a method to take damage)
-            //player.GetComponent<PlayerHealth>().TakeDamage(damage);
+            player.GetComponent<PlayerBehaviour>().TakeDamage(damage);
             lastAttackTime = Time.time;
         }
     }
@@ -139,8 +141,47 @@ public class EnemyAI : MonoBehaviour
         return navHit.position;
     }
 
-    // Draw the detection and attack ranges in the editor for debugging purposes
-    void OnDrawGizmosSelected()
+    public void TakeDamage(int amount)
+    {
+        health-=amount;
+        if (!isChasing)
+        {
+            StartCoroutine(ScreamAndChase());
+        }
+
+        if(health<=0)
+        {
+            Die();
+        }
+    }
+
+    public void Die()
+    {
+        // Disable animations and NavMeshAgent
+        if (animator != null)
+        {
+            animator.enabled = false;
+        }
+        if (agent != null)
+        {
+            agent.enabled = false;
+        }
+
+        // Enable ragdoll
+        SetRagdollState(true);
+    }
+
+    void SetRagdollState(bool state)
+    {
+        foreach (Rigidbody rb in ragdollBodies)
+        {
+            rb.isKinematic = !state;
+            rb.detectCollisions = state;
+        }
+    }
+
+        // Draw the detection and attack ranges in the editor for debugging purposes
+        void OnDrawGizmosSelected()
     {
         // Draw the detection range
         Gizmos.color = Color.yellow;

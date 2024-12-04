@@ -1,0 +1,609 @@
+{
+  "assetCategories": {
+    "decal": {
+      "metal": {
+        "other": {}
+      },
+      "other": {
+        "various": {}
+      },
+      "street": {
+        "other": {}
+      }
+    }
+  },
+  "averageColor": "#000000",
+  "categories": [
+    "atlas",
+    "decals",
+    "other"
+  ],
+  "comp_version": 1,
+  "description": "",
+  "displacementBias": 0.364452,
+  "displacementCalibrationAccuracy": 0.960914,
+  "displacementScale": 11.902081,
+  "environment": {
+    "biome": "urban",
+    "region": "Asia"
+  },
+  "highest_available_res": 8192,
+  "id": "ukmmbdsfw",
+  "json": {
+    "contentLength": 12832,
+    "uri": "ukmmbdsfw.json"
+  },
+  "maps": [
+    {
+      "averageColor": "#A7A7A7",
+      "bitDepth": 32,
+      "colorSpace": "sRGB",
+      "contentLength": 94870989,
+      "maxIntensity": 242,
+      "mimeType": "image/x-exr",
+      "minIntensity": 100,
+      "name": "AO",
+      "physicalSize": "1x1",
+      "resolution": "8192x8192",
+      "type": "ao",
+      "uri": "ukmmbdsfw_8K_AO.exr"
+    },
+    {
+      "averageColor": "#A7A7A7",
+      "bitDepth": 8,
+      "colorSpace": "sRGB",
+      "contentLength": 12671955,
+      "maxIntensity": 242,
+      "mimeType": "image/jpeg",
+      "minIntensity": 100,
+      "name": "AO",
+      "physicalSize": "1x1",
+      "resolution": "8192x8192",
+      "type": "ao",
+      "uri": "ukmmbdsfw_8K_AO.jpg"
+    },
+    {
+      "averageColor": "#54504C",
+      "bitDepth": 16,
+      "colorSpace": "sRGB",
+      "contentLength": 95097026,
+      "maxIntensity": 150,
+      "mimeType": "image/x-exr",
+      "minIntensity": 16,
+      "name": "Basecolor",
+      "physicalSize": "1x1",
+      "resolution": "8192x8192",
+      "type": "basecolor",
+      "uri": "ukmmbdsfw_8K_Basecolor.exr"
+    },
+    {
+      "averageColor": "#54504C",
+      "bitDepth": 8,
+      "colorSpace": "sRGB",
+      "contentLength": 10843546,
+      "maxIntensity": 150,
+      "mimeType": "image/jpeg",
+      "minIntensity": 16,
+      "name": "Basecolor",
+      "physicalSize": "1x1",
+      "resolution": "8192x8192",
+      "type": "basecolor",
+      "uri": "ukmmbdsfw_8K_Basecolor.jpg"
+    },
+    {
+      "averageColor": "#808080",
+      "bitDepth": 32,
+      "colorSpace": "Linear",
+      "contentLength": 84632316,
+      "maxIntensity": 255,
+      "mimeType": "image/x-exr",
+      "minIntensity": 0,
+      "name": "Bump",
+      "physicalSize": "1x1",
+      "resolution": "8192x8192",
+      "type": "bump",
+      "uri": "ukmmbdsfw_8K_Bump.exr"
+    },
+    {
+      "averageColor": "#808080",
+      "bitDepth": 8,
+      "colorSpace": "Linear",
+      "contentLength": 4562694,
+      "maxIntensity": 255,
+      "mimeType": "image/jpeg",
+      "minIntensity": 0,
+      "name": "Bump",
+      "physicalSize": "1x1",
+      "resolution": "8192x8192",
+      "type": "bump",
+      "uri": "ukmmbdsfw_8K_Bump.jpg"
+    },
+    {
+      "averageColor": "#FFFFFF",
+      "bitDepth": 32,
+      "colorSpace": "sRGB",
+      "contentLength": 136323755,
+      "maxIntensity": 255,
+      "mimeType": "image/x-exr",
+      "minIntensity": 255,
+      "name": "Cavity",
+      "physicalSize": "1x1",
+      "resolution": "8192x8192",
+      "type": "cavity",
+      "uri": "ukmmbdsfw_8K_Cavity.exr"
+    },
+    {
+      "averageColor": "#FFFFFF",
+      "bitDepth": 8,
+      "colorSpace": "sRGB",
+      "contentLength": 13475640,
+      "maxIntensity": 255,
+      "mimeType": "image/jpeg",
+      "minIntensity": 255,
+      "name": "Cavity",
+      "physicalSize": "1x1",
+      "resolution": "8192x8192",
+      "type": "cavity",
+      "uri": "ukmmbdsfw_8K_Cavity.jpg"
+    },
+    {
+      "averageColor": "#969696",
+      "bitDepth": 32,
+      "colorSpace": "Linear",
+      "contentLength": 102043750,
+      "maxIntensity": 255,
+      "mimeType": "image/x-exr",
+      "minIntensity": 0,
+      "name": "Displacement",
+      "physicalSize": "1x1",
+      "resolution": "8192x8192",
+      "type": "displacement",
+      "uri": "ukmmbdsfw_8K_Displacement.exr"
+    },
+    {
+      "averageColor": "#969696",
+      "bitDepth": 8,
+      "colorSpace": "Linear",
+      "contentLength": 1979374,
+      "maxIntensity": 255,
+      "mimeType": "image/jpeg",
+      "minIntensity": 0,
+      "name": "Displacement",
+      "physicalSize": "1x1",
+      "resolution": "8192x8192",
+      "type": "displacement",
+      "uri": "ukmmbdsfw_8K_Displacement.jpg"
+    },
+    {
+      "averageColor": "#606060",
+      "bitDepth": 32,
+      "colorSpace": "Linear",
+      "contentLength": 56296880,
+      "maxIntensity": 135,
+      "mimeType": "image/x-exr",
+      "minIntensity": 61,
+      "name": "Gloss",
+      "physicalSize": "1x1",
+      "resolution": "8192x8192",
+      "type": "gloss",
+      "uri": "ukmmbdsfw_8K_Gloss.exr"
+    },
+    {
+      "averageColor": "#606060",
+      "bitDepth": 8,
+      "colorSpace": "Linear",
+      "contentLength": 10786508,
+      "maxIntensity": 135,
+      "mimeType": "image/jpeg",
+      "minIntensity": 61,
+      "name": "Gloss",
+      "physicalSize": "1x1",
+      "resolution": "8192x8192",
+      "type": "gloss",
+      "uri": "ukmmbdsfw_8K_Gloss.jpg"
+    },
+    {
+      "averageColor": "#7E82E5",
+      "bitDepth": 16,
+      "colorSpace": "Linear",
+      "contentLength": 62331237,
+      "maxIntensity": 189,
+      "mimeType": "image/x-exr",
+      "minIntensity": 100,
+      "name": "Normal",
+      "physicalSize": "1x1",
+      "resolution": "8192x8192",
+      "type": "normal",
+      "uri": "ukmmbdsfw_8K_Normal.exr"
+    },
+    {
+      "averageColor": "#7E82E5",
+      "bitDepth": 8,
+      "colorSpace": "Linear",
+      "contentLength": 14923916,
+      "maxIntensity": 189,
+      "mimeType": "image/jpeg",
+      "minIntensity": 100,
+      "name": "Normal",
+      "physicalSize": "1x1",
+      "resolution": "8192x8192",
+      "type": "normal",
+      "uri": "ukmmbdsfw_8K_Normal.jpg"
+    },
+    {
+      "averageColor": "#525252",
+      "bitDepth": 32,
+      "colorSpace": "Linear",
+      "contentLength": 2777925,
+      "maxIntensity": 255,
+      "mimeType": "image/x-exr",
+      "minIntensity": 0,
+      "name": "Opacity",
+      "physicalSize": "1x1",
+      "resolution": "8192x8192",
+      "type": "opacity",
+      "uri": "ukmmbdsfw_8K_Opacity.exr"
+    },
+    {
+      "averageColor": "#525252",
+      "bitDepth": 8,
+      "colorSpace": "Linear",
+      "contentLength": 984895,
+      "maxIntensity": 255,
+      "mimeType": "image/jpeg",
+      "minIntensity": 0,
+      "name": "Opacity",
+      "physicalSize": "1x1",
+      "resolution": "8192x8192",
+      "type": "opacity",
+      "uri": "ukmmbdsfw_8K_Opacity.jpg"
+    },
+    {
+      "averageColor": "#9F9F9F",
+      "bitDepth": 32,
+      "colorSpace": "Linear",
+      "contentLength": 52959834,
+      "maxIntensity": 194,
+      "mimeType": "image/x-exr",
+      "minIntensity": 120,
+      "name": "Roughness",
+      "physicalSize": "1x1",
+      "resolution": "8192x8192",
+      "type": "roughness",
+      "uri": "ukmmbdsfw_8K_Roughness.exr"
+    },
+    {
+      "averageColor": "#9F9F9F",
+      "bitDepth": 8,
+      "colorSpace": "Linear",
+      "contentLength": 10747675,
+      "maxIntensity": 194,
+      "mimeType": "image/jpeg",
+      "minIntensity": 120,
+      "name": "Roughness",
+      "physicalSize": "1x1",
+      "resolution": "8192x8192",
+      "type": "roughness",
+      "uri": "ukmmbdsfw_8K_Roughness.jpg"
+    },
+    {
+      "averageColor": "#383838",
+      "bitDepth": 16,
+      "colorSpace": "sRGB",
+      "contentLength": 70306824,
+      "maxIntensity": 56,
+      "mimeType": "image/x-exr",
+      "minIntensity": 56,
+      "name": "Specular",
+      "physicalSize": "1x1",
+      "resolution": "8192x8192",
+      "type": "specular",
+      "uri": "ukmmbdsfw_8K_Specular.exr"
+    },
+    {
+      "averageColor": "#383838",
+      "bitDepth": 8,
+      "colorSpace": "sRGB",
+      "contentLength": 6896968,
+      "maxIntensity": 56,
+      "mimeType": "image/jpeg",
+      "minIntensity": 56,
+      "name": "Specular",
+      "physicalSize": "1x1",
+      "resolution": "8192x8192",
+      "type": "specular",
+      "uri": "ukmmbdsfw_8K_Specular.jpg"
+    }
+  ],
+  "meta": [
+    {
+      "key": "scanArea",
+      "name": "Scan Area",
+      "value": "1x1 m"
+    },
+    {
+      "key": "height",
+      "name": "Height",
+      "value": "0.05 m"
+    },
+    {
+      "key": "tileable",
+      "name": "Tileable",
+      "value": false
+    },
+    {
+      "key": "tiling_directions",
+      "name": "Tiling Directions",
+      "value": []
+    },
+    {
+      "key": "texelDensity",
+      "name": "Texel Density",
+      "value": "8192 px/m"
+    },
+    {
+      "key": "calibration",
+      "name": "Calibration",
+      "value": "GretagMacbeth ColorChecker Color Rendition Chart"
+    },
+    {
+      "key": "scanner",
+      "name": "Scanner",
+      "value": "MKX"
+    }
+  ],
+  "models": [],
+  "name": "Outdoor Led Wall Light",
+  "pack": null,
+  "physicalSize": null,
+  "points": 1,
+  "previews": {
+    "images": [
+      {
+        "contentLength": 126997,
+        "resolution": "360x360",
+        "tags": [
+          "thumb"
+        ],
+        "uri": "ukmmbdsfw_Grid_360.png"
+      },
+      {
+        "contentLength": 166976,
+        "resolution": "420x420",
+        "tags": [
+          "thumb"
+        ],
+        "uri": "ukmmbdsfw_Grid_420.png"
+      },
+      {
+        "contentLength": 446510,
+        "resolution": "720x720",
+        "tags": [
+          "thumb",
+          "retina"
+        ],
+        "uri": "ukmmbdsfw_Grid_720.png"
+      },
+      {
+        "contentLength": 595253,
+        "resolution": "840x840",
+        "tags": [
+          "thumb",
+          "retina"
+        ],
+        "uri": "ukmmbdsfw_Grid_840.png"
+      },
+      {
+        "contentLength": 1828252,
+        "resolution": "1440x768",
+        "tags": [
+          "preview",
+          "clay"
+        ],
+        "uri": "ukmmbdsfw_PopupClay_1440.png"
+      },
+      {
+        "contentLength": 3360115,
+        "resolution": "1920x1080",
+        "tags": [
+          "preview",
+          "clay"
+        ],
+        "uri": "ukmmbdsfw_PopupClay_1920.png"
+      },
+      {
+        "contentLength": 7025350,
+        "resolution": "2880x1536",
+        "tags": [
+          "preview",
+          "clay",
+          "retina"
+        ],
+        "uri": "ukmmbdsfw_PopupClay_2880.png"
+      },
+      {
+        "contentLength": 12157843,
+        "resolution": "3840x2160",
+        "tags": [
+          "preview",
+          "clay",
+          "retina"
+        ],
+        "uri": "ukmmbdsfw_PopupClay_3840.png"
+      },
+      {
+        "contentLength": 1635249,
+        "resolution": "1440x768",
+        "tags": [
+          "preview"
+        ],
+        "uri": "ukmmbdsfw_Popup_1440.png"
+      },
+      {
+        "contentLength": 3023717,
+        "resolution": "1920x1080",
+        "tags": [
+          "preview"
+        ],
+        "uri": "ukmmbdsfw_Popup_1920.png"
+      },
+      {
+        "contentLength": 6322728,
+        "resolution": "2880x1536",
+        "tags": [
+          "preview",
+          "retina"
+        ],
+        "uri": "ukmmbdsfw_Popup_2880.png"
+      },
+      {
+        "contentLength": 11556932,
+        "resolution": "3840x2160",
+        "tags": [
+          "preview",
+          "retina"
+        ],
+        "uri": "ukmmbdsfw_Popup_3840.png"
+      }
+    ],
+    "relativeSize": "1x1",
+    "scaleReferences": []
+  },
+  "process_date": "2024-04-17 01:48:10",
+  "properties": [],
+  "referencePreviews": {
+    "maps": [],
+    "models": []
+  },
+  "references": [],
+  "revised": false,
+  "revision": 0,
+  "semanticTags": {
+    "architectural_style": {},
+    "asset_type": "decal",
+    "color": [
+      "Black"
+    ],
+    "contains": [
+      "metal",
+      "glass",
+      "screw",
+      "lamp",
+      "light",
+      "LED",
+      "fence-light",
+      "post-light"
+    ],
+    "country": "Japan",
+    "descriptive": [
+      "old",
+      "worn",
+      "scratched",
+      "fixture"
+    ],
+    "environment": [
+      "urban",
+      "industrial"
+    ],
+    "industry": [
+      "archviz",
+      "games",
+      "VFX"
+    ],
+    "interior_exterior": [
+      "exterior"
+    ],
+    "locations": {
+      "Asia": {
+        "Japan": {}
+      }
+    },
+    "maxSize": 1,
+    "minSize": 1,
+    "name": "Outdoor Led Wall Light",
+    "orientation": [
+      "wall"
+    ],
+    "region": "Asia",
+    "resolution": 8192,
+    "state": [
+      "old"
+    ],
+    "subject_matter": "manmade",
+    "theme": [
+      "outdoor",
+      "urban",
+      "alleys",
+      "subway",
+      "downtown",
+      "modern",
+      "garden",
+      "landscaping",
+      "outdoors",
+      "walls"
+    ]
+  },
+  "tags": [
+    "decal",
+    "black",
+    "outdoor",
+    "urban",
+    "alleys",
+    "subway",
+    "downtown",
+    "modern",
+    "garden",
+    "landscaping",
+    "outdoors",
+    "walls",
+    "metal",
+    "glass",
+    "screw",
+    "lamp",
+    "light",
+    "led",
+    "fence-light",
+    "post-light",
+    "old",
+    "worn",
+    "scratched",
+    "fixture"
+  ],
+  "texelDensity": 8192,
+  "texture_type": "basic",
+  "ue_plugin_archives": [
+    {
+      "contentLength": 72681512,
+      "gltfVersion": "2.0",
+      "tier": 0,
+      "type": "gltf",
+      "uri": "ue_plugin_archives/tier_0/ukmmbdsfw_tier_0.zip",
+      "version": 1
+    },
+    {
+      "contentLength": 24543445,
+      "gltfVersion": "2.0",
+      "tier": 1,
+      "type": "gltf",
+      "uri": "ue_plugin_archives/tier_1/ukmmbdsfw_tier_1.zip",
+      "version": 1
+    },
+    {
+      "contentLength": 7118218,
+      "gltfVersion": "2.0",
+      "tier": 2,
+      "type": "gltf",
+      "uri": "ue_plugin_archives/tier_2/ukmmbdsfw_tier_2.zip",
+      "version": 1
+    },
+    {
+      "contentLength": 1202309,
+      "gltfVersion": "2.0",
+      "tier": 3,
+      "type": "gltf",
+      "uri": "ue_plugin_archives/tier_3/ukmmbdsfw_tier_3.zip",
+      "version": 1
+    }
+  ],
+  "version": 2
+}
