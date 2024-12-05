@@ -6,6 +6,8 @@ Name: William Alexander Abildtrup
 
 Student Number: 20233916
 
+Link to Video: <https://www.youtube.com/watch?v=Q2hf3Wk-QqY>
+
 Link to Project: <https://github.com/willineed/Pi3DZombies>
 # Overview of the Game:
 The idea of the project is to move through the level while surviving and shooting zombies. This game has taken inspiration mainly from Left 4 Dead 2. The goal of the game is to survive and reach the exit by making your way through the labyrinth but beware of the zombies. Use keyboard controls WASD to move, r to reload, left mouse button to shoot, mouse to look around, spacebar to jump.
