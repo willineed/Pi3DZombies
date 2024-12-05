@@ -1,4 +1,7 @@
+using System.Collections;
+using UnityEditor.SearchService;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 // This script has been made with the help of Github Copilot
 public class PlayerBehaviour : MonoBehaviour
@@ -33,7 +36,7 @@ public class PlayerBehaviour : MonoBehaviour
         }
 
         Move();
-        if (Input.GetButtonDown("Jump") && isGrounded)
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             Jump();
         }
@@ -60,7 +63,7 @@ public class PlayerBehaviour : MonoBehaviour
             controller.Move(moveDirection * speed * Time.deltaTime);
 
             // Rotate the player to face the movement direction
-            transform.rotation = Quaternion.Euler(0f, targetAngle, 0f);
+            //transform.rotation = Quaternion.Euler(0f, targetAngle, 0f);
         }
         else
         {
@@ -90,5 +93,17 @@ public class PlayerBehaviour : MonoBehaviour
     {
         // Handle player death (e.g., respawn, game over)
         Debug.Log("Player died");
+        controller.enabled = false;
+        UIManager.Instance.DisplayGameOverText();
+        StartCoroutine(Respawn());
+
+    }
+   
+    IEnumerator Respawn()
+    {
+        yield return new WaitForSeconds(3f);
+        
+        SceneManager.LoadScene("SampleScene");
+        UIManager.Instance.InitialHealthBar(maxHealth);
     }
 }

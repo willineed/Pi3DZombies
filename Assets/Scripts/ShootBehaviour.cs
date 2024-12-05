@@ -14,7 +14,7 @@ public class ShootBehaviour : MonoBehaviour
     public float fireRate = 0.3f;
     //public Transform shootPoint;
     public Camera fpsCamera;
-    public LayerMask enemyLayer;
+    public LayerMask playerLayer;
     public AudioClip pistolShot;
     public AudioSource audioSource;
     public ParticleSystem muzzleFlash;
@@ -26,7 +26,7 @@ public class ShootBehaviour : MonoBehaviour
     private void Start()
     {
         anim = GetComponent<Animator>();
-        LayerMask enemyLayer = LayerMask.GetMask("Enemy");
+        
     }
 
     void Update()
@@ -71,10 +71,10 @@ public class ShootBehaviour : MonoBehaviour
         anim.SetTrigger("shoot");
 
         RaycastHit hit;
-        if (Physics.Raycast(fpsCamera.transform.position, fpsCamera.transform.forward, out hit, range, enemyLayer))
+        if (Physics.Raycast(fpsCamera.transform.position, fpsCamera.transform.forward, out hit, range))
         {
             Debug.Log(hit.transform.name);
-            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
+            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow, playerLayer);
 
             // Deal damage to the target if it has a health component
             Enemy enemy = hit.transform.GetComponent<Enemy>();

@@ -13,6 +13,8 @@ public class UIManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI healthText;
     [SerializeField] private TextMeshProUGUI bulletsInMagText;
     [SerializeField] private TextMeshProUGUI overallAmmoText;
+    [SerializeField] private TextMeshProUGUI winText;
+    [SerializeField] private TextMeshProUGUI youLostText;
     [SerializeField] private Slider healthBar;
     [SerializeField] private Image healthFill;
     [SerializeField] private Gradient gradient;
@@ -41,7 +43,10 @@ public class UIManager : MonoBehaviour
             healthBar.maxValue = maxHealth;
             healthBar.value = maxHealth;
             healthFill.color = gradient.Evaluate(1f);
-            
+            healthText.text = "+" + maxHealth.ToString();
+            healthText.color = Color.green;
+
+
         }
     }
 
@@ -85,5 +90,19 @@ public class UIManager : MonoBehaviour
             overallAmmoText.text = overallAmmo.ToString();
         }
 }
-     
-}
+
+    public void DisplayWinText()
+    {
+        // Display the win text
+        Debug.Log("You win!");
+        winText.gameObject.SetActive(true);
+    }
+
+    public void DisplayGameOverText()
+    {
+        // Disable the win text
+        youLostText.gameObject.SetActive(true);
+
+    }
+    }
+

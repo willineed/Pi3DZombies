@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using System.Collections;
 using UnityEngine.Audio;
+using System.Runtime.CompilerServices;
 
 // This script has been made with the help of Github Copilot
 public class Enemy : MonoBehaviour
@@ -21,15 +22,20 @@ public class Enemy : MonoBehaviour
     private NavMeshAgent agent;
     private Animator animator;
     private AudioSource audioSource;
-    public Rigidbody[] ragdollBodies;
+    private Rigidbody[] ragdollBodies;
+    private Enemy enemyScript;
     private float timer;
     private bool isScreaming = false;
     private bool isChasing = false;
     private float lastAttackTime;
     [SerializeField]private int health = 30;
+    private Collider boxCollider;
 
     void Start()
     {
+        enemyScript = GetComponent<Enemy>();
+        ragdollBodies = GetComponentsInChildren<Rigidbody>();
+        boxCollider = GetComponent<BoxCollider>();
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
@@ -104,7 +110,7 @@ public class Enemy : MonoBehaviour
     {
         isScreaming = true;
         
-        agent.isStopped = true;
+        
         animator.SetBool("isWalking", false);
         animator.SetBool("isRunning", false);
 
@@ -112,6 +118,7 @@ public class Enemy : MonoBehaviour
         Vector3 direction = (player.position - transform.position).normalized;
         Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
         transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * 5f);
+        agent.isStopped = true;
 
         animator.SetTrigger("scream");
         PlayScreamSound();
@@ -166,9 +173,14 @@ public class Enemy : MonoBehaviour
         {
             agent.enabled = false;
         }
+        
 
         // Enable ragdoll
         SetRagdollState(true);
+        if (enemyScript != null)
+        {
+            enemyScript.enabled = false;
+        }
     }
 
     void SetRagdollState(bool state)
@@ -177,6 +189,7 @@ public class Enemy : MonoBehaviour
         {
             rb.isKinematic = !state;
             rb.detectCollisions = state;
+           boxCollider.enabled = !state;
         }
     }
 
