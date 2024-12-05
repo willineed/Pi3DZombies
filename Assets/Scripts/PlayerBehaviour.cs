@@ -26,25 +26,29 @@ public class PlayerBehaviour : MonoBehaviour
         currentHealth = maxHealth;
         UIManager.Instance.InitialHealthBar(maxHealth);
     }
-
+     
     private void Update()
     {
+        // Check if the player is on the ground
         isGrounded = controller.isGrounded;
+        // Reset the y velocity if the player is on the ground
         if (isGrounded && velocity.y < 0)
         {
             velocity.y = -2f;
         }
-
+        // Call the Move and Jump methods
         Move();
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             Jump();
         }
-
+        // Apply gravity to the player
         velocity.y += gravity * Time.deltaTime;
+        // Move the player based on the velocity
         controller.Move(velocity * Time.deltaTime);
     }
 
+    // Move the player based on input
     private void Move()
     {
         float moveHorizontal = Input.GetAxis("Horizontal");
@@ -62,8 +66,7 @@ public class PlayerBehaviour : MonoBehaviour
             // Move the player in the calculated direction
             controller.Move(moveDirection * speed * Time.deltaTime);
 
-            // Rotate the player to face the movement direction
-            //transform.rotation = Quaternion.Euler(0f, targetAngle, 0f);
+            
         }
         else
         {
@@ -73,11 +76,12 @@ public class PlayerBehaviour : MonoBehaviour
         }
 
     }
-
+    // Make the player jump
     private void Jump()
     {
         velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
     }
+    // Take damage and update the health bar
     public void TakeDamage(int amount)
     {
         currentHealth -= amount;
@@ -88,17 +92,18 @@ public class PlayerBehaviour : MonoBehaviour
             Die();
         }
     }
-
+    // Handle player death
     private void Die()
     {
-        // Handle player death (e.g., respawn, game over)
+        
         Debug.Log("Player died");
+        // Disable the player controller and display the game over text
         controller.enabled = false;
         UIManager.Instance.DisplayGameOverText();
         StartCoroutine(Respawn());
 
     }
-   
+   // Reloads the scene after a delay, resets initial health bar
     IEnumerator Respawn()
     {
         yield return new WaitForSeconds(3f);

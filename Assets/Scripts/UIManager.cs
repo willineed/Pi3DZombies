@@ -21,7 +21,7 @@ public class UIManager : MonoBehaviour
 
     private int _maxHealth = 100;
 
-
+    // singleton pattern
     private void Awake()
     {
         // Ensure that there's only one instance of UIManager
@@ -35,6 +35,8 @@ public class UIManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    // Initialize the player's health bar
     public void InitialHealthBar(int maxHealth)
     {
         if (healthBar != null)
@@ -71,7 +73,7 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    // Update the overall ammo display
+    // Update the bullets in the magazine display
     public void UpdateBulletsInMagText(int bulletsInMag)
     {
         if (bulletsInMagText != null)
@@ -81,6 +83,7 @@ public class UIManager : MonoBehaviour
 
 
     }
+    // Update the overall ammo display
     public void UpdateOverallAmmoText(int overallAmmo)
     {
       
@@ -91,6 +94,7 @@ public class UIManager : MonoBehaviour
         }
 }
 
+    // Display the text when the player wins
     public void DisplayWinText()
     {
         // Display the win text
@@ -98,9 +102,10 @@ public class UIManager : MonoBehaviour
         winText.gameObject.SetActive(true);
     }
 
+    // Display the text when the player loses
     public void DisplayGameOverText()
     {
-        // Disable the win text
+        
         youLostText.gameObject.SetActive(true);
 
     }

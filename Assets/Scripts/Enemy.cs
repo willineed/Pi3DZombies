@@ -46,19 +46,22 @@ public class Enemy : MonoBehaviour
     }
 
     void Update()
-    {
+    {// Check if the player is within the detection range
         float distanceToPlayer = Vector3.Distance(player.position, transform.position);
 
+        // Check if the player is within the attack range, if so attack the player
         if (distanceToPlayer <= attackRange)
         {
             AttackPlayer();
         }
-        else if (distanceToPlayer <= detectionRange || isChasing)
+        else if (distanceToPlayer <= detectionRange || isChasing) // if the player is within detection range or is chasing
         {
+            // if not screaming or chasing, scream and chase the player
             if (!isScreaming && !isChasing)
             {
                 StartCoroutine(ScreamAndChase());
             }
+            // if chasing, keep chasing
             else if (isChasing)
             {
                 ChasePlayer();
@@ -66,7 +69,7 @@ public class Enemy : MonoBehaviour
         }
       
     }
-    
+    // attack the player based on cooldown, if the cooldown is over, attack the player. display animation
     private void AttackPlayer()
     {
         agent.isStopped = true;
@@ -89,7 +92,7 @@ public class Enemy : MonoBehaviour
         animator.SetBool("isWalking", false);
         animator.SetBool("isRunning", true);
     }
-    // Wander around randomly
+    // Wander around randomly based on wander radius and wander timer
     private IEnumerator WanderRoutine()
     {
         while (true)
@@ -106,6 +109,8 @@ public class Enemy : MonoBehaviour
         }
     }
 
+
+    // Scream and chase the player, display animation and play sound
     private IEnumerator ScreamAndChase()
     {
         isScreaming = true;
@@ -135,6 +140,8 @@ public class Enemy : MonoBehaviour
         }
     }
     // Get a random position within a sphere
+
+    // Get a random position within a sphere
     public static Vector3 RandomNavSphere(Vector3 origin, float maxDist, float minDist, int layermask)
     {
         Vector3 randDirection;
@@ -148,6 +155,7 @@ public class Enemy : MonoBehaviour
         return navHit.position;
     }
 
+    // Take damage and check if the enemy should chase the player
     public void TakeDamage(int amount)
     {
         health-=amount;
@@ -162,6 +170,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
+    // Handle enemy death
     public void Die()
     {
         // Disable animations and NavMeshAgent
@@ -183,6 +192,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
+    // Enable or disable ragdoll physics
     void SetRagdollState(bool state)
     {
         foreach (Rigidbody rb in ragdollBodies)

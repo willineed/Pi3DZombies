@@ -13,7 +13,7 @@ public class Win : MonoBehaviour
     {
         
     }
-
+    // OnTriggerEnter display win text
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
