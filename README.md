@@ -4,7 +4,7 @@ Project Name: Labyrinth Zombie Shooter
 
 Name: William Alexander Abildtrup
 
-Student Number: 20233916
+Made as part of a university course.
 
 Link to Video: <https://www.youtube.com/watch?v=Q2hf3Wk-QqY>
 
